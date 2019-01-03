@@ -24,6 +24,8 @@ def parse(fstr):
     split = l.split(":")
     if len(split) == 2:
       toReturn[split[0].lstrip().rstrip()] = split[1].lstrip().rstrip()
+    elif len(split) >= 2:
+      toReturn[split[0].lstrip().rstrip()] = l[l.find(":") + 1:] # This would typically happen if HTML is embedded into a value.
     else:
       print("\tWARNING: Malformed Expression " + l) 
   return toReturn
