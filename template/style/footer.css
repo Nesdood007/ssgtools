@@ -1,0 +1,133 @@
+/* Styling for Footer and Copyright Bar */
+/* Footer Block */
+footer {
+  background-color: #002C3D;
+  box-shadow: 0px -5px 10px #555555;
+  color: gray;
+  margin: 10px 0px 0px 0px;
+}
+
+footer div#footer-top {
+  margin: 0px;
+  padding: 0% 10%;
+  background-color: #00121a;
+}
+
+footer div#footer-top table {
+  width: 100%;
+  text-align: center;
+}
+
+footer div#footer-top table dt {
+  font-family: bold;
+  font-size: 17px;
+  margin: 0px 0px 5px 0px;
+  padding: 1px;
+}
+
+footer div#footer-top table dd {
+  margin: 5px 0px;
+  padding: 1px;
+}
+
+footer div#footer-top table td {
+  font-family: menu;
+  margin: 0px;
+}
+
+footer div#footer-top dl {
+  height: 100%;
+  margin: 15px 0px;
+}
+
+footer div#footer-top dl dd {
+  margin: 0px;
+}
+
+/* Colors for Links */
+
+footer div#footer-top dt.color0 {
+  color: #BBE524;
+}
+
+footer div#footer-top .color0 a:link{
+  color: #BBE524;
+}
+
+footer div#footer-top .color0 a:hover{
+  background-color: #BBE524;
+  color: #111111;
+}
+
+footer div#footer-top dt.color1 {
+  color: #FF230F;
+}
+
+footer div#footer-top .color1 a:link{
+  color: #FF230F;
+}
+
+footer div#footer-top .color1 a:hover{
+  background-color: #FF230F;
+  color: #111111;
+}
+
+footer div#footer-top dt.color2 {
+  color: #2682A6;
+}
+
+footer div#footer-top .color2 a:link{
+  color: #2682A6;
+}
+
+footer div#footer-top .color2 a:hover{
+  background-color: #2682A6;
+  color: #111111;
+}
+
+/* NOTE: Experimental Orange Color */
+footer div#footer-top dt.color3 {
+  color: #fb9902;
+}
+
+footer div#footer-top .color3 a:link{
+  color: #fb9902;
+}
+
+footer div#footer-top .color3 a:hover{
+  background-color: #fb9902;
+  color: #111111;
+}
+/* End Exp. Orange Color */
+
+footer div#footer-top table a:link {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+footer div#footer-top table a:visited {
+  color: white;
+}
+
+
+footer div#footer-top table a:hover {
+  color: #111111;
+  background-color: white;
+}
+
+footer div#footer-top table a:active {
+  color: white;
+}
+
+footer div#footer-bottom {
+  font-family: ultralight;
+  color: white;
+}
+
+footer div#footer-bottom table {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}

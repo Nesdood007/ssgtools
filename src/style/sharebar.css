@@ -1,0 +1,56 @@
+/* Contains Styling for the Sharing Bar */
+
+/*
+Standard Use:
+
+<div id="sharebar">
+  <div class="container">
+    <ul>
+      <li class="fb"><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://twitter.com">Twitter</a></li>
+      <li><a href="https://reddit.com">Reddit</a></li>
+      <li><a href="https://instagram.com">Instagram</a></li>
+    </ul>
+  </div>
+</div>
+*/
+:root {
+  --num-logos: 4; /* Change this when adding new platforms */
+  --logo-size: calc(100% / var(--num-logos));
+  
+  /* Logo Info Goes Here */
+  --test-color: #abcdef;
+  --test-logo: url('/img/usctree.png');
+  --facebook-color: #000000;
+  --facebook-logo: url('/img/tmp');
+  --twitter-color: #000000;
+}
+
+div#sharebar {
+  background-color: #eee;
+  display: block;
+}
+
+div#sharebar ul {
+  margin: 0;
+  list-style-type:none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+div#sharebar ul li {
+  background-color: #333;
+  color: #eee;
+  width: var(--logo-size);
+  height: 100%;
+}
+
+/* START DEFINE FOR ALL SITES */
+div#sharebar ul li.fb {
+  background-color: #4267b2;
+  background-image: 
+}

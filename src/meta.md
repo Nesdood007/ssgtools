@@ -1,8 +1,9 @@
 ---
-layout: test
+title: Testing Page
 date: 1 Jan 2019
-authors: brady mandy harold
+author: brady mandy harold
 summary: Hello World This is a test! How are you today!
+tag: <span class="tag green"> Test </span>
 ---
 
 # Kids, we need to talk for a moment about Krusty Brand Chew Goo Gum Like Substance. We all knew it contained spider eggs, but the hantavirus? That came out of left field. So if you're experiencing numbness and/or comas, send five dollars to antidote, PO box…
@@ -36,13 +37,13 @@ Dear Mr. President, There are too many states nowadays. Please, eliminate three.
 Beer. Now there's a temporary solution. Last night's "Itchy and Scratchy Show" was, without a doubt, the worst episode *ever.* Rest assured, I was on the Internet within minutes, registering my disgust throughout the world.
 
 I can't go to juvie. They use guys like me as currency. Weaseling out of things is important to learn. It's what separates us from the animals…except the weasel. And here I am using my own lungs like a sucker.
-
+<div class="ts note">
 I like my beer cold, my TV loud and my homosexuals flaming. The Internet King? I wonder if he could provide faster nudity… No children have ever meddled with the Republican Party and lived to tell about it.
 
 I like my beer cold, my TV loud and my homosexuals flaming. Books are useless! I only ever read one book, "To Kill A Mockingbird," and it gave me absolutely no insight on how to kill mockingbirds! Sure it taught me not to judge a man by the color of his skin…but what good does *that* do me?
 
 I hope I didn't brain my damage. But, Aquaman, you cannot marry a woman without gills. You're from two different worlds… Oh, I've wasted my life. What good is money if it can't inspire terror in your fellow man?
-
+</div>
 Please do not offer my god a peanut. You don't win friends with salad. Old people don't need companionship. They need to be isolated and studied so it can be determined what nutrients they have that might be extracted for our personal use.
 
 Son, a woman is like a beer. They smell good, they look good, you'd step over your own mother just to get one! But you can't stop at one. You wanna drink another woman! Well, he's kind of had it in for me ever since I accidentally ran over his dog. Actually, replace "accidentally" with "repeatedly" and replace "dog" with "son."

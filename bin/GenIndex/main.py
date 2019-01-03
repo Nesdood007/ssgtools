@@ -34,15 +34,16 @@ def main():
   readAllFiles(list(os.scandir(src)), src)
   
   # Sort Entries
-  print("Sorting Entries...")
+  #print("Sorting Entries...")
   l = []
   for k in allFiles:
+    allFiles[k]["_SORT"] = parseDate(allFiles[k]["date"]) if "date" in allFiles[k].keys() else parseDate("")
     l.append((k, allFiles[k]))
   # Currently, we sort everything by date in descending order
-  l = sorted(l, key = lambda x: parseDate(x[1]["date"]) if "date" in x[1].keys() else parseDate(""), reverse = True)
+  l = sorted(l, key = lambda x: x[1]["_SORT"], reverse = True)
     
   # Render File
-  print("Rendering Files...")
+  #print("Rendering Files...")
   fheader = open(src + "/" + HEADER_FILE, "r")
   fcontent = open(src + "/" + CONTENT_FILE, "r")
   ffooter = open(src + "/" + FOOTER_FILE, "r")
@@ -68,19 +69,20 @@ def printUsage():
 def readAllFiles(cdir, base):
   for f in cdir:
     if f.is_dir():
-      print("Reading Directory " + str(f))
+      #print("Reading Directory " + str(f))
       readAllFiles(list(os.scandir(f.path)), base)
     elif f.is_file() and not f.name == HEADER_FILE and not f.name == CONTENT_FILE and not f.name == FOOTER_FILE and f.name[f.name.rfind("."):] in FILE_TYPES:
       
-      print("Reading File: " + f.path)
+      print(f.path + ":")
       fl = open(f.path, "r")
       fstr = fl.read()
       d = p.parse(fstr)
-      print("Dictionary is: " + str(d))
+      #print("Dictionary is: " + str(d))
       if d != None:
         allFiles[f.path.replace(base + "/", "")] = d
       else:
-        print(f.path + " Does not have YAML")
+        #print(f.path + " Does not have YAML")
+        pass
     
 # Dates should be in YYYY-MM-DD format
 # date: String of the date in YYYY-MM-DD format
@@ -89,12 +91,10 @@ def parseDate(date):
   toRet = 0
   split = date.split("-")
   if len(split) < 3:
-    print("Invalid Date")
     return -1
   toRet = int(split[0].lstrip().rstrip()) * 10000
   toRet += int(split[1].lstrip().rstrip()) * 100
   toRet += int(split[2].lstrip().rstrip()) * 1
-  print(str(date) + " : " + str(toRet))
   return toRet
   
 # Only run if main module.

@@ -1,3 +1,12 @@
+---
+title: Directory Test
+date: 2222-02-02
+author: brady
+summary: This is a Directory Test! Check it out!
+tag: <span class="tag green">this</span> <span class="tag red">is</span> <span class="tag blue">a</span> <span class="tag orange">test</span>
+filing: your mom
+---
+
 # We're also Santa Claus!
 
 Wow! A superpowers drug you can just rub onto your skin? You'd think it would be something you'd have to freebase. Alright, let's mafia things up a bit. Joey, burn down the ship. Clamps, burn down the crew.

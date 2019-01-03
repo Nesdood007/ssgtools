@@ -1,0 +1,78 @@
+/* Styling for Content */
+
+
+/* Text Sections */
+main div.ts {
+  background-color: white;
+  border-left: 5px solid gray;
+  margin: 5px 0px;
+  padding: 0.5em 0.5em 0.5em 1em; 
+}
+
+main div.ts p {
+  margin: 0px;
+}
+
+main div.ts h1 {
+  border-left: 0px;
+  color: gray;
+}
+
+main div.ts.note {
+  background-color: #F0F7D4;
+  border-color: #BBE524;
+}
+
+main div.ts.warn {
+  background-color: #fff9e6;
+  border-color: #ffc30f;
+}
+
+main div.ts.warn h1 {
+  color: #e6ac00;
+}
+
+main div.ts.err {
+  background-color: #ffe8e6;
+  border-color: #FF230F;
+}
+
+main div.ts.err h1 {
+  color: #FF230F;
+}
+/* END Text Sections */
+
+/* For Code Displays */
+main pre {
+  margin: 0px 0px 0px 10px;
+  counter-reset: line; /* Counter used for Code */
+  border-left: 1px solid gray;
+  background-color:#eee;
+  border-left: 5px solid #2682A6;
+  margin: 5px 0px;
+  padding: 1em;
+  white-space: pre-wrap;
+  font-family: ultralight;
+  color: #2682A6; /* For anything not in the code */
+}
+
+main pre code {
+  counter-increment: line;
+  word-wrap: break-word;
+  padding: .5em;
+  font-family: light;
+  line-height: 1.5rem;
+  color: black;
+  background-color: transparent;
+}
+
+main pre code:before {
+  content: counter(line);
+  -webkit-user-select: none;
+  border-right: 1px solid #777;
+  color: #777;
+  display: inline-block;
+  padding:0 0.5em;
+  margin-right: .5em;
+}
+/* END Code Display Box */

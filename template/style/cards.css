@@ -1,0 +1,134 @@
+/* Contains Styling used on Titlecards and Flashcards */
+
+/* Start Section-Specific Segments or Flashcards */
+
+section.flashcard {
+  min-height: 100vh;
+  background: rgb(255,35,15);
+  background: linear-gradient(146deg, rgba(255,35,15,1) 0%, rgba(38,130,166,1) 50%, rgba(187,229,36,1) 100%);
+  background-attachment: fixed;
+  color: white; /* Default to Light */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section.flashcard.img {
+  background-image: url("/temp/bg1.jpg"); /* This is a Demonstration Image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+section.flashcard div.container {
+  height: 100%;
+}
+
+section.flashcard.img .light {
+  color: white;
+  text-shadow: 0px 5px 5px #333;
+}
+
+section.flashcard.img .dark {
+  color: #333;
+  text-shadow: 0px 5px 5px #eee;
+}
+
+section.flashcard .dark {
+  color: #333;
+  text-shadow: 0px 5px 5px #eee;
+}
+
+section.flashcard h1, section.flashcard h2, section.flashcard h3, section.flashcard h4, section.flashcard h5, section.flashcard h6, section.flashcard p, section.flashcard a {
+  margin: auto;
+  text-align: center;
+  border: 0px;
+  /*padding: 0px;*/
+}
+
+section.flashcard h1 {
+  font-size: 60px;
+  font-family: title;
+}
+
+section.flashcard p {
+  font-size: 20px;
+  font-family: semibold;
+}
+
+/* Left/Right Container */
+section.flashcard div.lr-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+
+section.flashcard div.lr-container > div {
+  width: 50%;
+}
+
+section.flashcard div.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* END Flashcards */
+
+/* START TitleCards */
+
+section.titlecard {
+  min-height: 50vh;
+  color: white; /* Default to Light */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+}
+
+section.titlecard.red-orange {
+  background: rgb(255,81,0);
+  background: linear-gradient(45deg, rgba(255,81,0,1) 0%, rgba(255,35,15,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard.blue-green {
+  background: rgb(187,229,36);
+  background: linear-gradient(45deg, rgba(187,229,36,1) 0%, rgba(38,130,166,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard.grayscale {
+  background: rgb(51,51,68);
+  background: linear-gradient(66deg, rgba(51,51,68,1) 0%, rgba(153,153,170,1) 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+section.titlecard h1, section.titlecard h2, section.titlecard h3, section.titlecard h4, section.titlecard h5, section.titlecard h6, section.titlecard p, section.titlecard a {
+  margin: auto;
+  text-align: center;
+  border: 0px;
+  padding: 0px;
+}
+
+section.titlecard h1 {
+  font-size: 60px;
+  font-family: title;
+}
+
+section.titlecard p {
+  font-size: 20px;
+  font-family: semibold;
+}
+
+/* END TitleCards */
