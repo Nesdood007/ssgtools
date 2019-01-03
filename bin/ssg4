@@ -15,6 +15,8 @@
 # ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 # OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 #
+
+# Modifications made by Brady O'Leary
 set -e
 
 main() {
@@ -161,11 +163,12 @@ render_html_files() {
 render_md_files() {
 	while read -r f
 	do
+		bin/rmmeta.py < "$1/$f" | \
 		lowdown \
 		-D html-skiphtml \
 		-D smarty \
 		-d metadata \
-		-d autolink < "$1/$f" |
+		-d autolink  |
 		render_html_file "$3" \
 		> "$2/${f%\.md}.html"
 	done
