@@ -1,13 +1,5 @@
 # Makefile for SSG4 generation script for acm.cse.sc.edu
-
-PREFIX="https://acm.cse.sc.edu/"
-TITLE="ACM@USC"
 SRVPORT="8000"
-
-SRC="src"
-DST="dst"
-SRC_REPO=""
-DST_REPO=""
 
 include Makefile.conf
 
@@ -40,10 +32,10 @@ pull:
 
 # Push rendered content to the remote repository
 push:
-	cd $(SRC) && git add * && git commit
-	cd $(DST) && git add * && git commit
+	cd $(SRC) && git add * && git commit && git push
+	cd $(DST) && git add * && git commit && git push
 
 # Re-clone the Source and Destination Repos
 clone:
-	git clone $(SRC_REPO)
-	git clone $(DST_REPO)
+	git clone $(SRC_REPO) src
+	git clone $(DST_REPO) dst
