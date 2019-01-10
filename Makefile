@@ -37,5 +37,5 @@ push:
 
 # Re-clone the Source and Destination Repos
 clone:
-	git clone $(SRC_REPO) src
-	git clone $(DST_REPO) dst
+	git clone $(SRC_REPO) $(SRC)
+	git clone $(DST_REPO) $(DST)
