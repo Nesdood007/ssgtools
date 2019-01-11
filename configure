@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 # Run this file to generate the Makefile Configuration
 
-CONF_FILE = "../Makefile.conf"
-BAK="bak" # Backup Directory
+CONF_FILE = "Makefile.conf"
 
 print("Makefile.conf Generation Script")
 
