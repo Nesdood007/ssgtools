@@ -71,7 +71,7 @@ def readAllFiles(cdir, base):
     if f.is_dir():
       #print("Reading Directory " + str(f))
       readAllFiles(list(os.scandir(f.path)), base)
-    elif f.is_file() and not f.name == HEADER_FILE and not f.name == CONTENT_FILE and not f.name == FOOTER_FILE and f.name[f.name.rfind("."):] in FILE_TYPES:
+    elif f.is_file() and not f.name == HEADER_FILE and not f.name == CONTENT_FILE and not f.name == FOOTER_FILE and f.name[f.name.rfind("."):] in FILE_TYPES and not f.name[0:1] == "_" :
       
       print(f.path + ":")
       fl = open(f.path, "r")
