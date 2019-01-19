@@ -14,7 +14,11 @@ clean:
 
 # Serve the Generated HTML for testing purposes
 srv:
-	cd $(DST) && python3 -m http.server $(SRVPORT)
+	cd $(DST) && python3 -m http.server --bind 127.0.0.1 $(SRVPORT)
+
+srv-dangerous:
+	echo "WARNING: DON'T USE THIS FOR PRODUCTION, ONLY USE FOR TESTING!!"
+	cd $(DST) && python3 -m http.server --bind 0.0.0.0 $(SRVPORT)
 
 # Generate Just the index
 index: 
