@@ -3,12 +3,12 @@ This is a tool used to create a blog-styled table of contents using a separate h
 How this works:
   This program reads all .md files in the src directory, and reads the YAML metadata from the header. This is stored in memory.
   After all files are read, then the Table of Contents Page is Generated, from the total number of articles, and also for just tags.
-    For Page Generation, the body is concatinated with the header and footer. For each article, the contents of the post template are evaluated, and inserted into the _post.html template file, and added into the body. Posts will be added in order of most recent post (as specified by the date in the metadata).
+    For Page Generation, the body is concatinated with the header and footer. For each article, the contents of the post template are evaluated, and inserted into the _index_content.html template file, and added into the body. Posts will be added in order of most recent post (as specified by the date in the metadata).
     
 Files:
-  _header.html: Header Segment
-  _post.html: Post Template
-  _footer.html: Footer Segment
+  _index_header.html: Header Segment
+  _index_content.html: Post Template
+  _index_footer.html: Footer Segment
   
 templating Info:
   Variables should look like: {varname}

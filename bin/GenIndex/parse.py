@@ -12,11 +12,14 @@ def parse(fstr):
   if idx == -1:
     print("\tNO YAML BLOCK. SKIPPING FILE")
     return None
+  if idx != 0:
+    print("\tYAML BLOCK DOESN'T START AT LINE 0, INDEX 0. SKIPPING FILE")
+    return None
   end = fstr.find(YAML_BLOCK, idx + 1)
   if end == -1:
     print("\tYAML BLOCK DOESN'T END! SKIPPING FILE")
     return None
-    
+  #print("Starts at: " + str(idx))
   lines = fstr[idx + len(YAML_BLOCK) + 1:end].splitlines()
   #print(lines)
   toReturn = {}

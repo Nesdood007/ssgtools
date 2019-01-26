@@ -47,12 +47,12 @@ Allows for Custom Titles, and a wider variety of HTML Content within Markdown.
 ### Markdown Files
 Accepts regular markdown files, but with the toolchain, can also accept some metadata to go along with it.
 
-'''
+```
 ---
 Variable: Value
 ---
 # Lorem Ipsum ...
-'''
+```
 
 This metadata is stored as YAML, much like how Jekyll would work in this manner.
 
@@ -61,13 +61,19 @@ This generation tool also accepts HTML files, and will render them inside of the
 
 ### Template files
 In the src directory, there should be a few files to be used as a template. These are:
+
 * For Page Generation
+
   * `_header.html`
+  
   * `_footer.html`
 
 * For Index Generation
+
   * `_index_header.html`
+  
   * `_index_content.html`
+  
   * `_index_footer.html`
 
 These Files contain HTML that is attached together with the generated content to form the individual webpages in this website. However, the index and Content Pages are generated in a slightly different manner.
