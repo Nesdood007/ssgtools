@@ -40,6 +40,8 @@ main() {
 	test -f "$f_file" && FOOTER=$(cat "$f_file") && export FOOTER
 	test -f "$h_file" && HEADER=$(cat "$h_file") && export HEADER
 
+	which cpio >/dev/null 2>&1 || { echo "ssg4: cpio not found"; exit 4; }
+
 	list_dirs "$src" |
 	(cd "$src" && cpio -pdu "$dst")
 
@@ -55,7 +57,7 @@ main() {
 		echo "$fs" | tee "$dst/.files"
 
 		if echo "$fs" | grep -q '\.md$'
-		then test -x "$(which lowdown)" || exit 3
+		then test -x "$(which lowdown)" || { echo "ssg4: lowdown not installed"; exit 3; }
 		fi
 		echo "$fs" | grep '\.md$' |
 		render_md_files "$src" "$dst" "$title"
