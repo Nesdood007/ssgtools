@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Tests for Dependencies for SSGTools and Prints out a meaningful error Message
+
+if test -z $(command -v lowdown); then
+	echo "Lowdown is not installed. Be sure that it is installed and located in your PATH variable."
+	echo "https://kristaps.bsd.lv/lowdown/"
+	exit 1
+fi
+
+
+

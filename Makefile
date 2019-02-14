@@ -4,9 +4,11 @@ SRVPORT="8000"
 include Makefile.conf
 
 # Make everything
-all: 
+all:
+	bin/testDep # Tests Dependencies and prints Error Messages
 	bin/ssg4 $(SRC) $(DST) $(TITLE) $(PREFIX)
 	bin/GenIndex/main.py $(SRC) $(DST)
+	cp -a $(SRC)/.htaccess $(DST)/.htaccess
 
 # Remove all generated files
 clean: 
