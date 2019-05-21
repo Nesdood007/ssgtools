@@ -7,9 +7,9 @@ include Makefile.conf
 all:
 	bin/testDep # Tests Dependencies and prints Error Messages
 	bin/ssg4 $(SRC) $(DST) $(TITLE) $(PREFIX)
-	#bin/GenIndex/main.py $(SRC) $(DST)
-	bin/GenIndex/main.py $(SRC) $(DST) $(SRC)/.index
+	bin/GenIndex/main.py $(SRC) $(DST)
 	cp -a $(SRC)/.htaccess $(DST)/.htaccess
+
 # Remove all generated files
 clean: 
 	cd $(DST) && rm .files && rm -r *

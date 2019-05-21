@@ -3,7 +3,7 @@
 # This is a module that parses the content of a YAML header on a MArkdown File
 # WARNING: THIS VERSION OF YAML DOESN'T UNDERSTAND STRUCTURE
 
-from main import YAML_BLOCK
+YAML_BLOCK="---"
 
 # Returns a Dictionary of the YAML Tags from the markdown
 # Takes the content of a file as a string
