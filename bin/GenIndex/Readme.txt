@@ -29,3 +29,9 @@ Things to keep in mind:
     Date should be formatted as YEAR-MONTH-DAY where all 3 categories are numbers
   YAML:
     The YAML parsed here doesn't understand structure, so any nested YAML variables will NOT work as expected. Therefore, do not nest them.
+    
+Files in the Directory:
+    .ignore - A List of UNIX File PAths to ignore
+    .index (root only) - Lists where all Generated Indicies will be.
+        Format:
+            Each entry will consist of the following (one entry per line): <Source Directory> <Destination Directory> [<Header Template> <Content Template> <Footer Template>]
