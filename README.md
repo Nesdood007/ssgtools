@@ -6,12 +6,57 @@ SSG4 Copyright 2018 Roman Zolotarev <hi@romanzolotarev.com>
 
 All Python Tools Copyright Brady O'Leary
 
+# Installation
+
+## System Requirements:
+
+- Running Linux-based OS. May also work on BSD, I'm not sure. Tested on Ubuntu 18.04.
+
+- The following must be installed:
+
+    - Python 3.5+
+    
+    - git
+    
+    - make
+    
+    - lowdown
+    
+        - This can be found at (https://kristaps.bsd.lv/lowdown/)[https://kristaps.bsd.lv/lowdown/]. Follow the Instructions there.
+        
+        - You could alternatively modify the program to use a different Markdown Converter
+        
+## Setup
+
+1. Close this repository locally
+
+2. run `./configure` and input the following:
+
+    ```
+    Makefile.conf Generation Script
+    Website Title:
+    <Your Website Title Here>
+    Website Base Address: 
+    <Your Website Base Address, like "https://arsmachina.net", goes here>
+    Source Repository Address (if none, leave blank):
+    <git clone address of your Source Repository>
+    Destination Repository Address (if none, leave blank):
+    <git clone address of your Destination Repository>
+    Makefile.conf has been generated. Next run "$ make clone"
+    ```
+    
+    This generates the `Makefile.conf` that is used to populate Variables in the Makefile
+    
+3. run `make clone`. This automatically clones your source and destination repositories into the required directories
+
+4. At this point, the setup is complete. You should try running `make && make srv` to be sure that the website is generated properly
+
 # How to use the Site Generation Toolset:
 
 ## Directoryies and Files:
 
 ### bin
-Contains all Binary Files used in generating the website
+Contains all Executable Files used in generating the website
 
 ### dst
 Destination where all rendered HTML files are located
@@ -41,6 +86,14 @@ Contains example template files and Markdown files to provide a reference for ho
 
 ### (Coming Soon) Markdown Preprocessing Toolchain
 Allows for Custom Titles, and a wider variety of HTML Content within Markdown.
+
+### Index Generator
+This generates index pages for your website.
+Please See readme in `/bin/GenIndex`.
+
+### PhotoGallery Helper
+This generates Markdown Files for Files. This actually isn't just limited to Photos.
+Please see readme in `/bin/photogallery`.
 
 ## Usage
 
