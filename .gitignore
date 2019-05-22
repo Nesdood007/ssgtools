@@ -108,3 +108,6 @@ Makefile.conf
 src
 dst
 template
+
+# For Dolphin
+.directory

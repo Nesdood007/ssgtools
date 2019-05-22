@@ -4,7 +4,7 @@
 
 if test -z $(command -v lowdown); then
 	echo "Lowdown is not installed. Be sure that it is installed and located in your PATH variable."
-	echo "https://kristaps.bsd.lv/lowdown/"
+	echo " Download from https://kristaps.bsd.lv/lowdown/"
 	exit 1
 fi
 

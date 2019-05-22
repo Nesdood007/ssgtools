@@ -2,8 +2,6 @@
 
 # Generates the Necessary Markdown Files to use the Index Generator as a Photo Gallery Generator
 
-# TODO Put in check to not overwrite existing MArkdown Files
-
 import sys
 import os
 
