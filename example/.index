@@ -1,0 +1,5 @@
+# This Specifies where to generate Indexes
+# Entries should read as follows: SRC DST
+/ / /_template/_index_header.html /_template/_index_content1.html /_template/_index_footer.html
+/dirtest /dirtest /_template/_index_header.html /_template/_index_content.html /_template/_index_footer.html
+/photos /photos
