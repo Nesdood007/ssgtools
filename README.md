@@ -22,7 +22,7 @@ All Python Tools Copyright Brady O'Leary
     
     - lowdown
     
-        - This can be found at (https://kristaps.bsd.lv/lowdown/)[https://kristaps.bsd.lv/lowdown/]. Follow the Instructions there.
+        - This can be found at [https://kristaps.bsd.lv/lowdown/](https://kristaps.bsd.lv/lowdown/). Follow the Instructions there.
         
         - You could alternatively modify the program to use a different Markdown Converter
         
