@@ -77,7 +77,7 @@ Use this to render the website. Has the following Commands:
 Creates the Makefile.conf file which specifies the Source and Destination directories and repositories, if any.
 
 ### example
-Contains example template files and Markdown files to provide a reference for how the rendering system works.
+Contains example template files and Markdown files to provide a reference for how the rendering system works. To test the system, you can copy the contents of this directory into the source directory
 
 ## Parts
 
