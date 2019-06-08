@@ -84,9 +84,6 @@ Contains example template files and Markdown files to provide a reference for ho
 ### SSG4
 [SSG](https://www.romanzolotarev.com/ssg.html) is a tool created by Roman Zolotarev for publishing static sites. By itself, it is quite barebones, but allows for easy customization and hacking.
 
-### (Coming Soon) Markdown Preprocessing Toolchain
-Allows for Custom Titles, and a wider variety of HTML Content within Markdown.
-
 ### Index Generator
 This generates index pages for your website.
 Please See readme in `/bin/GenIndex`.
@@ -121,7 +118,7 @@ In the src directory, there should be a few files to be used as a template. Thes
   
   * `_footer.html`
 
-* For Index Generation
+* For Index Generation (These files may be in a different location)
 
   * `_index_header.html`
   

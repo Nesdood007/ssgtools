@@ -1,6 +1,6 @@
 # Photo Gallery Helper
 
-This tool generates the necessary Markdown files to use the Index Generator as a Photo Gallery.
+This tool generates the necessary Markdown files to use the Index Generator as a Photo Gallery. It will not overwrite existing markdown files.
 
 ## Usage
 
@@ -22,3 +22,7 @@ imgpath: {PATH}
 <p> Image at {PATH} </p>
 
 ```
+
+## Additional Uses
+
+This program isn't just limited to use with photos. It should also be able to be used with any other file format (excluding other .md and .html files for obvious reasons), although it would not be a great idea to unleash it on your root directory, as it will generate a lot of trash on your hard drive. The idea is that you primarily use the variables in the yaml header to add to the functionality of your index, such as by adding descriptions, detailed filenames, among other things.
