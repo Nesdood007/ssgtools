@@ -174,6 +174,6 @@ Each entry should follow this format
     
 ## Format:
 
-Each entry will consist of the following (one entry per line): <Source Directory> <Destination Directory> [<Header Template> <Content Template> <Footer Template>]
+Each entry will consist of the following (one entry per line): `<Source Directory> <Destination Directory> [<Header Template> <Content Template> <Footer Template>]`
 
 `*` - Please note that the index generator doesn't actually use YAML, but instead a key/value pair seperated by a `:`.
