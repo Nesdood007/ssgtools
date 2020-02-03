@@ -56,7 +56,7 @@ def main():
         tmpl_header = (src_root + "/" + args[2]).replace("//", "/")
         tmpl_content = (src_root + "/" + args[3]).replace("//", "/")
         tmpl_footer = (src_root + "/" + args[4]).replace("//", "/")
-      else: 
+      else:
         print("Not enough Arguments on line", i, file=sys.stderr)
         continue
       IGNORE = parseIgnore(src)
@@ -80,7 +80,7 @@ def main():
       tmpl_header = sys.argv[3]
       tmpl_content = sys.argv[4]
       tmpl_footer = sys.argv[5]
-    
+
     IGNORE = parseIgnore(src)
     print("Ignore List:", IGNORE)
     doGen(src, dst, tmpl_header, tmpl_content, tmpl_footer)
@@ -113,7 +113,7 @@ def doGen(src, dst, header, content, footer):
   src = src.rstrip("/")
   dst = dst.rstrip("/")
   readAllFiles(list(os.scandir(src)), src)
-  
+
   # Sort Entries
   #print("Sorting Entries...")
   l = []
@@ -131,18 +131,18 @@ def doGen(src, dst, header, content, footer):
   fcontent = open(content, "r")
   ffooter = open(footer, "r")
   findex = open(dst + "/" + INDEX_FILE, "w")
-  
+
   header = fheader.read()
   content = fcontent.read()
   footer = ffooter.read()
-  
+
   w = r.renderAll(l, header, content, footer)
   findex.write(w)
   findex.close()
   fheader.close()
   fcontent.close()
   ffooter.close()
-  
+
 # cdir: Should be a ScanDir Iterator or list or something
 # base: This is the name of the base directory where the source files are
 def readAllFiles(cdir, base):
@@ -164,15 +164,15 @@ def readAllFiles(cdir, base):
       else:
         #print(f.path + " Does not have YAML")
         pass
- 
-# Checks if the filename path matches something in the .ignore file   
+
+# Checks if the filename path matches something in the .ignore file
 def checkIgnore(name):
   global IGNORE
   for i in IGNORE:
     if (fnmatch.fnmatch(name, i)):
       return True
   return False
-    
+
 # Dates should be in YYYY-MM-DD format
 # date: String of the date in YYYY-MM-DD format
 # Returns -1 if invalid
@@ -185,7 +185,7 @@ def parseDate(date):
   toRet += int(split[1].lstrip().rstrip()) * 100
   toRet += int(split[2].lstrip().rstrip()) * 1
   return toRet
-  
+
 # Only run if main module.
 if __name__ == "__main__":
   main()

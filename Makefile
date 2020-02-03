@@ -10,6 +10,7 @@ all:
 	#bin/GenIndex/main.py $(SRC) $(DST)
 	bin/GenIndex/main.py $(SRC) $(DST) $(SRC)/.index
 	cp -a $(SRC)/.htaccess $(DST)/.htaccess
+
 # Remove all generated files
 clean: 
 	cd $(DST) && rm .files && rm -r *

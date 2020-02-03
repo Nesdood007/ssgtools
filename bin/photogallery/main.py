@@ -13,11 +13,11 @@ def main():
   if len(sys.argv) < 2:
     print(usage())
     return
-  
+
   DIR = ""
   TMPL = ""
   hasTMPL = False
-  
+
   for i, arg in enumerate(sys.argv):
     print(arg, i)
     if i == 1:
@@ -27,7 +27,7 @@ def main():
         TMPL = arg
       if not hasTMPL and arg == "-t":
         hasTMPL = True
-        
+
   findFiles(list(os.scandir(DIR)), DIR)
   print(allFiles)
   if not hasTMPL:
@@ -37,7 +37,7 @@ def main():
     template = tf.read()
     tf.close()
     renderFiles(DIR, lambda fname: genContentTemplate(fname, template))
-  
+
 # Renders Markdown Files
 # base => Base Directory for everything
 def renderFiles(base, render):
@@ -51,7 +51,7 @@ def renderFiles(base, render):
       f = open(base + "/" + i + ".md", 'w')
       f.write(render(i))
       f.close()
-      
+
 def findFiles(cdir, base):
   for f in cdir:
     if f.is_dir():
@@ -65,14 +65,14 @@ def findFiles(cdir, base):
 # Default Template to Use
 def defaultTemplate():
   return "---\npath: {PATH}\nname: {NAME}\n---"
-  
-  
+
+
 def genContentTemplate(fname, template):
   return template.replace("{PATH}", fname).replace("{NAME}", fname[fname.rfind("/") + 1:])
-  
-  
+
+
 def usage():
-  return "./main.py DIR [-t TEMPLATE]\n\twhere TEMPLATE is the Template Markdown File and DIR is the Directory of the Photos.\nIf a template file is not specified, then a basic template will be generated."  
+  return "./main.py DIR [-t TEMPLATE]\n\twhere TEMPLATE is the Template Markdown File and DIR is the Directory of the Photos.\nIf a template file is not specified, then a basic template will be generated."
 
 if __name__ == "__main__":
   main()
