@@ -123,8 +123,8 @@ def doGen(src, dst, header, content, footer):
       allFiles[k]["_SORT"] = parseDate(allFiles[k]["date"]) if "date" in allFiles[k].keys() else parseDate("")
     l.append((k, allFiles[k]))
   # Currently, we sort everything by date in descending order
-  l = sorted(l, key = lambda x: x[1]["_SORT"], reverse = True)
-    
+  l = sorted(l, key = lambda x: int(x[1]["_SORT"]), reverse = True)
+
   # Render File
   #print("Rendering Files...")
   fheader = open(header, "r")
